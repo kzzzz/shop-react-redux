@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import  selectedCompanyReducer from 'selectedCompany';
+import  selectedCompanyReducer from './selectedCompany';
 
 const rootReducer = combineReducers({
     selectedCompany: selectedCompanyReducer

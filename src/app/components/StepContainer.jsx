@@ -1,4 +1,8 @@
 import React from 'react';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+
+import{selectCompany} from '../actions/index';
 
 class StepContainer extends React.Component {
     render() {
@@ -10,4 +14,16 @@ class StepContainer extends React.Component {
     }
 }
 
-export default StepContainer;
+function mapStateToProps(state) {
+    return {
+        order: state.order
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({
+        selectCompany: selectCompany
+    }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(StepContainer) ;
