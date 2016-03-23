@@ -5,8 +5,6 @@ class StepContainer extends React.Component {
         return (
             <div>
                 <h2>StepContainer</h2>
-                <div>Company</div>
-                <div>Product</div>
             </div>
         )
     }
